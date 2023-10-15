@@ -14,15 +14,19 @@ vim.opt.runtimepath:prepend(lazypath)
 require("lazy").setup({
     spec = {
         {
-            "omega-nvim/omega-nvim",
+            dir = "~/neovim_plugins/omega-nvim",
             import = "omega.modules",
         },
         -- add extra modules
         { import = "plugins" },
     },
     defaults = {
-        lazy = false,
+        lazy = true,
         version = false,
+    },
+    dev = {
+        patterns = { "omega-nvim", "max397574" },
+        path = "~/neovim_plugins/",
     },
     ui = {
         custom_keys = {
