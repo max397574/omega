@@ -1,13 +1,13 @@
 return {
     "nvim-neorg/neorg",
-    dev = true,
     opts = {
         load = {
             ["core.dirman"] = {
                 config = {
                     workspaces = {
-                        notes = "~/notes",
-                        plugins = "~/neovim_plugins/",
+                        notes = "~/1_Knowledge/2_Notes/",
+                        books = "~/1_Knowledge/1_Books/",
+                        plugins = "~/4_ComputerScience/1_Programming/neovim_plugins/",
                     },
                 },
             },

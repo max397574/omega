@@ -2,6 +2,24 @@ return {
     "mhartington/formatter.nvim",
     opts = {
         filetype = {
+            yaml = {
+                function()
+                    return {
+                        exe = "yamlfmt",
+                        args = { vim.fn.expand("%"), "-o", "-" },
+                    }
+                end,
+            },
+            typst = {
+                function()
+                    vim.cmd.w()
+                    return {
+                        exe = "typstfmt",
+                        args = { vim.fn.expand("%"), "-o", "-" },
+                        stdin = true,
+                    }
+                end,
+            },
             query = {
                 function()
                     return {

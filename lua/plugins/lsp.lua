@@ -3,7 +3,7 @@ return {
         "neovim/nvim-lspconfig",
         opts = {
             lua = {
-                plugins = { "lazy.nvim", "neocomplete.nvim" },
+                plugins = { "lazy.nvim", "neocomplete.nvim", "telescope.nvim" },
             },
         },
     },
